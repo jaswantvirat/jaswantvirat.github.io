@@ -1,0 +1,170 @@
+:root {
+    --ink: #0f172a;
+    --muted-ink: #475569;
+    --accent: #2563eb;
+    --bg: #ffffff;
+    --muted-bg: #f8fafc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+}
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 24px;
+}
+
+.narrow {
+    max-width: 800px;
+}
+
+/* Header */
+.header {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.nav a {
+    margin-left: 28px;
+    text-decoration: none;
+    color: var(--muted-ink);
+    font-size: 14px;
+}
+
+.nav-cta {
+    color: var(--accent);
+    font-weight: 500;
+}
+
+/* Hero Slider */
+.hero-slider {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.hero-overlay {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.65);
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay h1,
+.hero-overlay p,
+.hero-overlay span {
+    color: #ffffff;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 12px;
+}
+
+.hero h1 {
+    font-size: 46px;
+    margin: 20px 0;
+}
+
+.hero-text {
+    font-size: 18px;
+    max-width: 700px;
+}
+
+/* Sections */
+.section {
+    padding: 100px 0;
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+.muted {
+    background: var(--muted-bg);
+}
+
+/* Timeline */
+.timeline {
+    border-left: 2px solid #e5e7eb;
+    padding-left: 40px;
+}
+
+.timeline-item {
+    margin-bottom: 60px;
+}
+
+.time {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: var(--accent);
+    text-transform: uppercase;
+}
+
+.timeline-item h3 {
+    font-size: 20px;
+    margin: 8px 0;
+}
+
+.org {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* Impact */
+.impact-list li {
+    margin-bottom: 16px;
+    font-size: 17px;
+}
+
+/* Footer */
+.footer {
+    padding: 40px 0;
+    font-size: 14px;
+    color: var(--muted-ink);
+    border-top: 1px solid #e5e7eb;
+}
